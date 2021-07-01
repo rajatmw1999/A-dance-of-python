@@ -3,6 +3,8 @@ from twilio.rest import Client
 import os
 
 print("Starting....")
+print(os.environ.get("ACCOUNT_SID"))
+print(os.environ.get("AUTH_TOKEN"))
 
 # Your Account Sid and Auth Token from twilio account
 account_sid = os.environ.get("ACCOUNT_SID")
