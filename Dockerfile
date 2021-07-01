@@ -1,0 +1,8 @@
+FROM python:3
+
+COPY Basics/5.SMSCODE.py .
+RUN pip install twilio
+
+ENV ACCOUNT_SID=ACb01d3ccc58b1b0eff822c25c736fffbb AUTH_TOKEN=9b69093519f379f180174669838952ba
+
+CMD ["python", "5.SMSCODE.py"]
