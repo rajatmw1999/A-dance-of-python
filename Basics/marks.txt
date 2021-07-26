@@ -1,0 +1,10 @@
+2021-07-26
+Physics = 67
+Maths = 74
+Chemistry = 77
+
+2021-07-26
+Physics = 66
+Maths = 70
+Chemistry = 81
+
