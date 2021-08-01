@@ -1,0 +1,11 @@
+Q. How many days do we have in a week?
+A. Seven
+--
+Q. How many days are there in a year?
+A. 365 (not a leap year)
+--
+Q. How many colors are there in a rainbow?
+A. 7
+--
+Q. Which animal is known as the Ship of the Desert?
+A. Camel
