@@ -1,25 +1,25 @@
-class Student:
-    uniform = True
-
-    def __init__(self, name, standard):
+class Song:
+    def __init__(self, name, genre, duration):
         self.name = name
-        self.standard = standard
+        self.genre = genre
+        self.duration = duration
     
-    def showStudent(self):
-        print("Name: " + self.name + "\nStandard: " + self.standard)
-        return "Got it"
+    def showSong(self):
+        return "Name: "+self.name+"\nGenre: "+self.genre+"\nDuration: "+self.duration
+    
+    def showParticularGenre(self, genre):
+        if self.genre == genre:
+            return self.name
+        else:
+            return False    
 
+countryroad = Song("Country Roads","Country Song","3m")
+blowingwind = Song("Blowing in the wind","Folk","2m 10s")
 
-goutham = Student("Goutham","12")
-
-
-# goutham.uniform = False
-# print(goutham.uniform)
-
-# print(goutham.showStudent())
-
-
-print(hasattr(goutham, 'name'))
+print(countryroad.showSong())
+print(blowingwind.showSong())
+print(countryroad.showParticularGenre("Folk"))
+print(blowingwind.showParticularGenre("Folk"))
 
 # The getattr(obj, name[, default]) − to access the attribute of object.
 
