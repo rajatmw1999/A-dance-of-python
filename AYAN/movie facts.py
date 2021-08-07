@@ -1,0 +1,4 @@
+import random
+randomnumber = random.randint(0, 7)
+movies_factslist = ["Bollywood movies particularly starring the Khans, Shahrukh Khan", "Salman Khan and Aamir Khan are the most sought after movies in the muslim countries like Pakistan, UAE, Bangladesh, Afghanistan etc.","Aamir Khan’s blockbuster movie “Lagaan” became the first Bollywood movie to have a nation-wide release in China in decades.","To recognise the performance of actors and artists in Bollywood, the Indian screen magazine Filmfare started the first Filmfare Awards in 1954, and the awards were given.","Bollywood movies are the only films in the world which consists of 4-5 musical songs in each film.", "The period from the late 1940s to the 1960s is regarded by film analysts and pundits as the “Golden Age” of Bollywood."," Bollywood movies are the only films in the world which consists of 4-5 musical songs in each film."]
+print(movies_factslist[randomnumber])
