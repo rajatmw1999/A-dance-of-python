@@ -1,14 +1,13 @@
 import pandas as pd
 import os
-df = pd.read_csv('OS.csv')
-questions = list(df['Questions'])
-answers = list(df['Answers'])
+df = pd.read_excel('atoms.xlsx')
+questions = list(df['Question'])
+answers = list(df['Answer'])
 author = list(df['Author'])
 
 def display():
     try:
         i = 0
-        print("Subject: ", os.path.basename('OS.csv'))
         while i<len(questions):
             flag = 1
             j=0
