@@ -1,0 +1,18 @@
+.carrot{
+    text-align: center;
+}
+
+@keyframes rotateBackground{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+#Group1{
+    animation: rotateBackground 3s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
