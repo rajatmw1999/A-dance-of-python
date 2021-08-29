@@ -1,0 +1,4 @@
+1. Use less print() statements. Especially not inside long loops, since IO operations preempt the process from CPU and thus the overhead slows down the process.
+2. Use sys module for faster operations
+3. Make batch inserts in database. It is useful since only one write lock will be created and db connection won't be called for every record separately.
+4. Use messsge packs for JSON.
