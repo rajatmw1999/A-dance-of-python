@@ -3,6 +3,10 @@ from selenium import webdriver
 
 # time for pausing between navigation
 import time
+from selenium.webdriver.chrome.options import Options  
+
+chrome_options = Options()
+chrome_options.add_argument("--headless") 
 
 def get_quote():
     today_quote = None
@@ -26,7 +30,7 @@ def get_quote():
 
 def submit_assignment(username, password):
     # Using Chrome to access web
-    driver = webdriver.Chrome(executable_path="C:\\Users\\hp\\OneDrive\\Desktop\\chromedriver_win32\\chromedriver.exe")
+    driver = webdriver.Chrome(executable_path="C:\\Users\\hp\\OneDrive\\Desktop\\chromedriver_win32\\chromedriver.exe", chrome_options=chrome_options)
     time.sleep(5)
 
     # Open the website
@@ -50,7 +54,7 @@ def submit_assignment(username, password):
 
     my_next_tweet = get_quote()
     if len(my_next_tweet) < 258:
-        my_next_tweet = my_next_tweet + '\n' + '#motivation #success'
+        my_next_tweet = my_next_tweet + '\n' + '#motivation #success '
     elif len(my_next_tweet) < 280:
         pass
     elif len(my_next_tweet) >= 280:
@@ -60,9 +64,10 @@ def submit_assignment(username, password):
 
     tweetbox.send_keys(my_next_tweet)
 
-    time.sleep(2)
+    time.sleep(5)
 
     login = driver.find_element_by_xpath('//span[normalize-space()="Tweet"]')
+    time.sleep(5)
     login.click()
 
     time.sleep(5)
