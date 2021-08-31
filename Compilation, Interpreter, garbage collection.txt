@@ -1,0 +1,27 @@
+As a Machine Learning Engineer, I have been using Python for more than a year. Recently, I have also started learning C++, for fun. It made me realize how easy and intuitive Python is. I got more curious about how Python is different from other languages and its working. In this blog, I try to scratch Python’s inner working.
+Python started as a hobby project by Guido Van Rossum and was first released in 1991. A general purpose language, Python is powering large chunk of many companies like Netflix and Instagram. In an interview, Guido compares Python to languages like Java or Swift and says that while the latter two are a great choice for software developers — people whose day job is programming, but Python was made for people whose day job has nothing to do with software development but they code mainly to handle data.
+When you read about Python, quite often you come across words like — compiled vs interpreted, bytecode vs machine code, dynamic typing vs static typing, garbage collectors, etc. Wikipedia describes Python as
+Python is an interpreted, high-level, general-purpose programming language. It is is dynamically typed and garbage-collected.
+Interpreted Languages
+When you write a program in C/C++, you have to compile it. Compilation involves translating your human understandable code to machine understandable code, or Machine Code. Machine code is the base level form of instructions that can be directly executed by the CPU. Upon successful compilation, your code generates an executable file. Executing this file runs the operations in your code step by step.
+For the most part, Python is an interpreted language and not a compiled one, although compilation is a step. Python code, written in .py file is first compiled to what is called bytecode (discussed in detail further) which is stored with a .pyc or .pyo format.
+Instead of translating source code to machine code like C++, Python code it translated to bytecode. This bytecode is a low-level set of instructions that can be executed by an interpreter. In most PCs, Python interpreter is installed at /usr/local/bin/python3.8. Instead of executing the instructions on CPU, bytecode instructions are executed on a Virtual Machine.
+Why Interpreted?
+One popular advantage of interpreted languages is that they are platform-independent. As long as the Python bytecode and the Virtual Machine have the same version, Python bytecode can be executed on any platform (Windows, MacOS, etc).
+Dynamic typing is another advantage. In static-typed languages like C++, you have to declare the variable type and any discrepancy like adding a string and an integer is checked during compile time. In strongly typed languages like Python, it is the job of the interpreter to check the validity of the variable types and operations performed.
+Disadvantages of Interpreted languages
+Dynamic typing provides a lot of freedom, but simultaneously it makes your code risky and sometimes difficult to debug.
+Python is often accused of being ‘slow’. Now while the term is relative and argued a lot, the reason for being slow is because the interpreter has to do extra work to have the bytecode instruction translated into a form that can be executed on the machine. A StackOverflow post makes it easier to understand using an analogy —
+If you can talk in your native language to someone, that would generally work faster than having an interpreter having to translate your language into some other language for the listener to understand.
+What exactly is Garbage Collection?
+In older programming languages, memory allocation was quite manual. Many times when you use variables that are no longer in use or referenced anywhere else in the program, they need to be cleaned from the memory. Garbage Collector does that for you. It automatically frees up space without you doing anything. The memory management works in two ways —
+In a simplified way, it keeps track of the number of references to an object. When that number goes down to zero, it deletes that object. This is called reference counting. This cannot be disabled in Python.
+In cases where object references itself or two objects refer each other, a process called generation garbage collection helps. This is something traditional reference counting cannot take care of.
+What is __pycache__ ?
+Many times in your personal project or on GitHub, you might have seen a folder named __pycache__ being created automatically.
+/folder
+   - __pycache__
+       - preprocess.cpython-36.pyc
+   - preprocess.py
+As you can see, the filename is the same as the one outside __pycache__ folder. The .pyc extension tells us that the file contains bytecode for preprocess.py. The names cpython denotes the type of interpreter. CPython means that the interpreter was implemented in C language. Similarly, JPython is a Python interpreter implemented in Java.
+But why is the folder created in the first place? Well, it slightly increases the speed of the Python program. Unless you change your Python code, recompilation to bytecode is avoided, thereby saving time.
