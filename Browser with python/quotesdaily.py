@@ -30,7 +30,8 @@ def get_quote():
 
 def submit_assignment(username, password):
     # Using Chrome to access web
-    driver = webdriver.Chrome(executable_path="C:\\Users\\hp\\OneDrive\\Desktop\\chromedriver_win32\\chromedriver.exe")
+    # driver = webdriver.Chrome(executable_path="C:\\Users\\hp\\OneDrive\\Desktop\\chromedriver_win32\\chromedriver.exe")
+    driver = webdriver.Chrome(executable_path="chromedriver.exe")
     time.sleep(5)
 
     # Open the website
