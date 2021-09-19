@@ -11,7 +11,7 @@ def email(rec):
     
         receiver_email = rec
         message = MIMEMultipart("alternative")
-        message["Subject"] = "Prayers " + str(x)
+        message["Subject"] = "Sundays " + str(x)
         message["From"] = sender_email
         message["To"] = receiver_email
 
@@ -33,5 +33,5 @@ def email(rec):
             )
         print(rec,x,"sent!")
 
-for x in ("rajatis1999@gmail.com","vivekcheema026@gmail.com","Sarthaksrishtiss18@gmail.com","sakshi1499@gmail.com", "pratyushsingh736@gmail.com","gouthamgokri@gmail.com"):
+for x in ("rajatis1999@gmail.com","vivekcheema026@gmail.com","Sarthaksrishtiss18@gmail.com","sakshi1499@gmail.com", "pratyushsingh736@gmail.com","gouthamgokri@gmail.com","gargmohil@gmail.com"):
     email(x)
