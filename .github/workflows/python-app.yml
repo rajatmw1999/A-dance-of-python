@@ -23,5 +23,5 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest
-        echo python --version
+        pip install email_text email
+        python --version
