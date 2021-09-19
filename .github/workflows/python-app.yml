@@ -23,5 +23,5 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install email_text email
         python --version
+        python Project_modules/2.send_email_without_aws.py
