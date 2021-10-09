@@ -7,11 +7,11 @@ sender_email = "eganinjahattori@gmail.com"
 password = "Eganinja@2021"
 html = email_text
 def email(rec):
-    for x in range(1):
+    for x in range(5):
     
         receiver_email = rec
         message = MIMEMultipart("alternative")
-        message["Subject"] = "Sundays " + str(x)
+        message["Subject"] = "Here's to first classes " + str(x)
         message["From"] = sender_email
         message["To"] = receiver_email
 
@@ -33,5 +33,5 @@ def email(rec):
             )
         print(rec,x,"sent!")
 
-for x in ("rajatis1999@gmail.com","vivekcheema026@gmail.com","Sarthaksrishtiss18@gmail.com","sakshi1499@gmail.com", "pratyushsingh736@gmail.com","gouthamgokri@gmail.com","gargmohil@gmail.com"):
+for x in ("smridhi.baunthiyal7@gmail.com","smridhi.baunthiyal07@gmail.com","vivekcheema026@gmail.com","Sarthaksrishtiss18@gmail.com","sakshi1499@gmail.com", "pratyushsingh736@gmail.com"):
     email(x)
