@@ -33,5 +33,5 @@ def email(rec):
             )
         print(rec,x,"sent!")
 
-for x in ("smridhi.baunthiyal7@gmail.com","smridhi.baunthiyal07@gmail.com","vivekcheema026@gmail.com","Sarthaksrishtiss18@gmail.com","sakshi1499@gmail.com", "pratyushsingh736@gmail.com"):
+for x in ("ajithppnair@gmail.com","rajat.campk12@gmail.com","smridhi.baunthiyal7@gmail.com","smridhi.baunthiyal07@gmail.com","vivekcheema026@gmail.com","Sarthaksrishtiss18@gmail.com","sakshi1499@gmail.com", "pratyushsingh736@gmail.com"):
     email(x)
