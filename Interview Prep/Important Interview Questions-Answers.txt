@@ -1,0 +1,26 @@
+Q-1) What is a dynamically typed language?
+Ans) In a strongly-typed language, such as Python, "1" + 2 will result in a type error since these languages don't allow for "type-coercion" (implicit conversion of data types). On the other hand, a weakly-typed language, such as Javascript, will simply output "12" as result.
+
+Type-checking can be done at two stages -
+
+ a) Static - Data Types are checked before execution.
+ b)Dynamic - Data Types are checked during execution.
+
+Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language.
+
+
+Q-2) What is __init__?
+Ans) __init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them.
+It helps in distinguishing methods and attributes of a class from local variables.
+
+Code-Explanation:
+
+# class definition
+class Student:
+   def __init__(self, fname, lname, age, section):
+       self.firstname = fname
+       self.lastname = lname
+       self.age = age
+       self.section = section
+# creating a new object
+stu1 = Student("Sara", "Ansh", 22, "A2")
