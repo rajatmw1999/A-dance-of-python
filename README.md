@@ -4,3 +4,5 @@ All you need to know about Python is in this repo. "A dance of python" contains 
 https://www.tutorialspoint.com/python/python_classes_objects.htm
 
 Class Inheritance
+
+![Visitor Count](https://profile-counter.glitch.me/rajatmw1999/count.svg)
